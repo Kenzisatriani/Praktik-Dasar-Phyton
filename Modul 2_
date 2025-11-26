@@ -1,0 +1,478 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "id": "f78cbd28-5090-46de-a66f-108e773e3bfb",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Halo Takumi\n",
+      "Halo Takumi\n"
+     ]
+    }
+   ],
+   "source": [
+    "#TYPE STRING\n",
+    "#Type String \n",
+    "print('Halo Takumi') #membuat string dengan tanda petik tunggal \n",
+    "print(\"Halo Takumi\") #membuat string dengan tanda petik tunggal"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "id": "8bc300bd-b1dd-4583-8c78-01fed5ee7191",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Halo\n",
+      "Takumi\n",
+      "Halo Takumi\n"
+     ]
+    }
+   ],
+   "source": [
+    "#Variabel Type String \n",
+    "s1 = 'Halo' #variabel string 1\n",
+    "s2 = 'Takumi' #variabel string 2\n",
+    "\n",
+    "#menampilan type string \n",
+    "print (s1)\n",
+    "print (s2)\n",
+    "print (s1 +' '+ s2)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 3,
+   "id": "f01d9e05-362e-4788-9c5f-368c1fc13dfb",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "False\n",
+      "False\n",
+      "True\n",
+      "True\n",
+      "True\n"
+     ]
+    }
+   ],
+   "source": [
+    "#Membandingkan string \n",
+    "s1 = 'Halo' #variabel string 1\n",
+    "s2 = 'Takumi' #variabel string 2\n",
+    "\n",
+    "print (s1 > s2)\n",
+    "print (s1 >= s2)\n",
+    "print (s1 < s2)\n",
+    "print (s1 <= s2)\n",
+    "print (s1 != s2)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 5,
+   "id": "7562afae-59e1-41dc-a694-49870b1a0542",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "T\n",
+      "k\n",
+      "Ta\n",
+      "Taku\n",
+      "umi\n",
+      "mi\n",
+      "Tak\n",
+      "Takumi oke\n",
+      "TakumiTakumi\n"
+     ]
+    }
+   ],
+   "source": [
+    "#Mengambil Substring; menggunakan tanda bracket []\n",
+    "\n",
+    "s = 'Takumi'\n",
+    "\n",
+    "print(s[0]) #menampilkan sub string karakter pertama \n",
+    "print(s[-4]) #menampilkan sub string karakter  ke 4 dari kanan \n",
+    "print(s[:2]) #menampilkjan dua karakter di awal \n",
+    "print(s[:-2]) #menghilangkan dua karakter terakhir \n",
+    "print(s[3:]) #menampilkan tiga karakter terakhir \n",
+    "print(s[-2:]) #menampilkan dua karakter terakhir \n",
+    "print(s[0:3]) #menampilkan karakter dari 0\n",
+    "len(s) #Menunjukan jumlah karakter \n",
+    "print(s +' '+ 'oke') #Penggabungan \n",
+    "print(s*2) #Pengulangan "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 7,
+   "id": "09e1f209-8b23-442f-be5a-39ce4c966581",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "1"
+      ]
+     },
+     "execution_count": 7,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "#Menemukan offset substring \n",
+    "s = 'Takumi'\n",
+    "s.find('aku')"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 9,
+   "id": "ab47a5ac-850f-4ee2-aa43-7bad0b5b9b4c",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "'TAKUmi'"
+      ]
+     },
+     "execution_count": 9,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "#Mengganti kemunculan suatu substring dengan substring lainnya \n",
+    "s = 'Takumi'\n",
+    "s.replace('aku', 'AKU')"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 11,
+   "id": "c5bf5a16-215a-4ca9-b75a-436c67d3b802",
+   "metadata": {
+    "scrolled": true
+   },
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "'TAKUMI'"
+      ]
+     },
+     "execution_count": 11,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "#Mengkonversi huruf besar dan kecil \n",
+    "s = 'Takumi'\n",
+    "s.upper()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 12,
+   "id": "153574c6-5e33-497e-9bc6-cd423d4cdf9d",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "<class 'int'>\n",
+      "<class 'int'>\n",
+      "<class 'int'>\n"
+     ]
+    }
+   ],
+   "source": [
+    "#TYPE NUMERIK\n",
+    "#Type integer \n",
+    "a = 1\n",
+    "b = -17\n",
+    "c = 100\n",
+    "\n",
+    "print(type(a))\n",
+    "print(type(b))\n",
+    "print(type(c))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 13,
+   "id": "680190fa-70cd-4ff8-a410-eb5b1be87821",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "<class 'float'>\n",
+      "<class 'float'>\n",
+      "<class 'float'>\n"
+     ]
+    }
+   ],
+   "source": [
+    "#Type Float \n",
+    "x = 3.14\n",
+    "y = -0.175\n",
+    "z = 0.05\n",
+    "\n",
+    "print(type(x))\n",
+    "print(type(y))\n",
+    "print(type(z))\n",
+    "\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 14,
+   "id": "653d3f9d-2e77-47b0-8323-e01dbcb37308",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "<class 'complex'>\n",
+      "<class 'complex'>\n",
+      "3.0\n",
+      "2.0\n"
+     ]
+    }
+   ],
+   "source": [
+    "#Type complex\n",
+    "s1 = 3 + 2j\n",
+    "s2 = -2.5j\n",
+    "\n",
+    "print(type(s1))\n",
+    "print(type(s2))\n",
+    "print(s1.real) #menampilkan bilangan real\n",
+    "print(s1.imag) #menampilkan bilangan imajiner "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 15,
+   "id": "acb4c77d-f3c5-466d-a421-72b39415ac42",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "3\n",
+      "-17.0\n",
+      "(-0.175+0j)\n"
+     ]
+    }
+   ],
+   "source": [
+    "#Konversi Tipe Data Numerik \n",
+    "\n",
+    "#Konversi ke integer\n",
+    "x = int(3.14)\n",
+    "print(x)\n",
+    "\n",
+    "#Konversi ke float \n",
+    "b = float(-17)\n",
+    "print(b)\n",
+    "\n",
+    "#Konversi ke complex\n",
+    "y = complex(-0.175)\n",
+    "print(y)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 16,
+   "id": "ee9ca881-c3ac-4495-9584-a86a61b5bb84",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "21\n",
+      "9\n",
+      "90\n",
+      "2.5\n",
+      "2\n",
+      "3\n",
+      "11390625\n"
+     ]
+    }
+   ],
+   "source": [
+    "#Operasi Aritmatika\n",
+    "a = 15\n",
+    "b = 6\n",
+    "print(a + b) #Penjumlahan\n",
+    "print(a - b) #Pengurangan \n",
+    "print(a * b) #Perkalian \n",
+    "print(a / b) #Pembagian\n",
+    "print(a // b) #Pmbagian bilangan bulat \n",
+    "print(a % b) #Modulus\n",
+    "print(a ** b) #eksponen"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 18,
+   "id": "dea57d04-9ffd-420c-89fd-f2f0257a8e43",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "2.0\n",
+      "6.283185307179586\n",
+      "1.0\n"
+     ]
+    }
+   ],
+   "source": [
+    "#Modul math \n",
+    "import math \n",
+    "a = 4\n",
+    "b = 2\n",
+    "c = 0\n",
+    "print(math.sqrt(a)) #akar variabel a - 4\n",
+    "print(math.pi*(b)) #perkalian variabel b - 2 dengan pi = 3,14\n",
+    "print(math.cos(c)) #cosinus variabel c - 0 "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 19,
+   "id": "f91a0637-bc1c-43c7-acec-e0b34ad46621",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "(1.600485180440241+1.2496210676876531j)\n",
+      "(22.979085577886128+14.744805188558727j)\n"
+     ]
+    }
+   ],
+   "source": [
+    "#Modul cmath\n",
+    "import cmath\n",
+    "z = 1 + 4j\n",
+    "print(cmath.sqrt(z)) #akar variabel z\n",
+    "print(cmath.sin(z)) #sinus variabel z"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 20,
+   "id": "da3f69b0-30bb-4e8d-9e83-b9030735f8af",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "<class 'bool'>\n",
+      "<class 'bool'>\n"
+     ]
+    }
+   ],
+   "source": [
+    "#Type Boolean \n",
+    "t = True \n",
+    "f = False \n",
+    "\n",
+    "print(type(t))\n",
+    "print(type(f))\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 21,
+   "id": "a27e037a-0215-4538-a798-68f28161487f",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "False\n",
+      "True\n",
+      "False\n",
+      "True\n",
+      "True\n",
+      "False\n"
+     ]
+    }
+   ],
+   "source": [
+    "#Operasi type Boolean \n",
+    "t = True \n",
+    "f = False \n",
+    "\n",
+    "print(t and f)\n",
+    "print(t and t)\n",
+    "print(f and f)\n",
+    "print(t or f)\n",
+    "print(t or t)\n",
+    "print(f or f)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "b24172fd-6975-4e6d-bd05-79cba70661cd",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3 (ipykernel)",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.13.5"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
