@@ -1,0 +1,72 @@
+# Smart Parking System menggunakan SET
+
+# Inisialisasi set untuk menyimpan plat nomor kendaraan yang sedang parkir
+parkiran = set()
+
+def masuk_parkir(plat):
+    """Menambahkan plat nomor ke dalam set parkiran"""
+    if plat in parkiran:
+        print(f"Mobil dengan plat {plat} sudah ada di parkiran.")
+    else:
+        parkiran.add(plat)
+        print(f"Mobil dengan plat {plat} berhasil masuk parkir.")
+
+def keluar_parkir():
+    """Menghapus plat nomor dari set parkiran berdasarkan pilihan angka"""
+    if not parkiran:
+        print("Parkiran kosong, tidak ada mobil yang keluar.")
+        return
+    
+    print("\nDaftar mobil yang sedang parkir:")
+    daftar_plat = list(parkiran)
+    for i, plat in enumerate(daftar_plat, start=1):
+        print(f"{i}. {plat}")
+    
+    try:
+        pilihan = int(input("Pilih nomor mobil yang keluar: "))
+        if 1 <= pilihan <= len(daftar_plat):
+            plat = daftar_plat[pilihan - 1]
+            parkiran.remove(plat)
+            print(f"Mobil dengan plat {plat} keluar dari parkiran.")
+        else:
+            print("Nomor pilihan tidak valid.")
+    except ValueError:
+        print("Input harus berupa angka.")
+
+def monitoring_parkir():
+    """Menampilkan daftar plat nomor yang sedang parkir"""
+    if parkiran:
+        print("Daftar mobil yang sedang parkir:")
+        for plat in parkiran:
+            print("-", plat)
+    else:
+        print("Parkiran kosong.")
+
+def menu():
+    # Ucapan selamat datang
+    print(" 🚗 SELAMAT DATANG DI SMART PARKING 🚗 ")
+    
+    while True:
+        print("\n=== SMART PARKING SYSTEM ===")
+        print("1. Masuk Parkir")
+        print("2. Keluar Parkir")
+        print("3. Monitoring Parkir")
+        print("4. Exit")
+        
+        pilihan = input("Pilih menu (1-4): ")
+        
+        if pilihan == "1":
+            plat = input("Masukkan plat nomor: ")
+            masuk_parkir(plat)
+        elif pilihan == "2":
+            keluar_parkir()
+        elif pilihan == "3":
+            monitoring_parkir()
+        elif pilihan == "4":
+            print("😊🙏 Terima kasih, sistem parkir selesai 🙏😊")
+            break
+        else:
+            print("Pilihan tidak valid, coba lagi.")
+
+# Jalankan program
+menu()
