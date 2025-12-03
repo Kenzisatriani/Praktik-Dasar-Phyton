@@ -1,0 +1,40 @@
+# def printElements(s,info):
+#   print(info)
+#   if len(s) == 0:
+#     print("himpunan kosong")
+#   for i in s:
+#     print(i)
+
+# s = set([11,22,33,44,55])
+# printElements(s,"sebelum:")
+
+# s.add(66)
+# s.add(77)
+# s.add(88)
+# s.add(99)
+# s.add(88)
+# print(s)
+# printElements(s,"setelah panggilan add():")
+
+# # update 
+# s.update([2025])
+# printElements(s,"setelah panggilan s[0]")
+
+x = set([1,2,3])
+y = set([3,4])
+
+# union (menggabungkan)
+union = x | y
+print("hasil union dari 2 seet:", union)
+
+# intersection (data yang sama di kedua set)
+inter_section  = x & y
+print("hasil dari 2 seet:",inter_section)
+
+# operasi difference (ada di awal tapi tidak ada di set yang lain)
+difference = x - y
+print("hasil dari 2 seet:",difference)
+
+# symetric difference (data yang beda di kedua set, namun yang sama akan dibuang)
+symetric_difference = x ^ y
+print("hasil dari 2 seet:",symetric_difference)
