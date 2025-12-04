@@ -1,0 +1,33 @@
+# Variabel global untuk menyimpan total gaji
+total_gaji = 0
+
+# Function 1: Mengatur total gaji (menggunakan global dan return)
+def set_total_gaji(gaji):
+    global total_gaji
+    total_gaji = gaji
+    return total_gaji
+
+# Function 2: Membagi gaji ke beberapa bagian (untuk: gaji karyawan, tabungan prusahaan, dan operasional)
+def pembagian_gaji(persen_karyawan, persen_tabungan, persen_operasional):
+    gaji_karyawan = total_gaji * persen_karyawan / 100
+    gaji_tabungan = total_gaji * persen_tabungan / 100
+    gaji_operasional = total_gaji * persen_operasional / 100
+    return gaji_karyawan, gaji_tabungan, gaji_operasional
+
+# Function 3: Menampilkan hasil pembagian gaji
+def tampilkan_hasil(gaji_karyawan, gaji_tabungan, gaji_operasional):
+    print("=== Hasil Pembagian Gaji ===")
+    print(f"Gaji untuk Karyawan   : Rp {gaji_karyawan:,.0f}")
+    print(f"Tabungan Perusahaan   : Rp {gaji_tabungan:,.0f}")
+    print(f"Biaya Operasional     : Rp {gaji_operasional:,.0f}")
+    print("=============================")
+
+# Program utama
+# 1. Set total gaji
+set_total_gaji(10000000)  # contoh: Rp 10.000.000
+
+# 2. Bagi gaji sesuai persentase
+hasil = pembagian_gaji(50, 30, 20)  # 50% karyawan, 30% tabungan, 20% operasional
+
+# 3. Tampilkan hasil
+tampilkan_hasil(*hasil)
